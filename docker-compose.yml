@@ -1,0 +1,23 @@
+services:
+  shinobi:
+    image: shinobi:latest
+    container_name: shinobi-container
+    volumes:
+      - /var/lib/shinobi:/var/lib/shinobi
+      - /etc/shinobi/conf.json:/opt/shinobi/conf.json
+      - /etc/shinobi/super.json:/opt/shinobi/super.json
+    environment:
+      - DB_HOST=mysql-container
+      - DB_USER=majesticflame
+      - DB_PASSWORD=cool
+    ports:
+      - "8080:8080"
+      - "1337:1337"
+    networks:
+      - mysql
+    restart: unless-stopped
+
+networks:
+  mysql:
+    name: mysql_default
+    external: true

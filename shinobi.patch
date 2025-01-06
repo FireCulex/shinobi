@@ -1,0 +1,11 @@
+--- libs/ffmpeg.js	2024-12-29 15:29:45.697974409 -0800
++++ libs/ffmpeg.js	2024-12-29 15:29:16.517506109 -0800
+@@ -33,7 +33,7 @@
+                 ke: e.ke,
+                 mid: e.mid,
+             }
+-            const ffmpegCommand = [`-progress pipe:5 -rw_timeout 5000000`];
++            const ffmpegCommand = [`-progress pipe:5`];
+             const allOutputs = [
+                 buildMainStream(e),
+                 buildJpegApiOutput(e),
