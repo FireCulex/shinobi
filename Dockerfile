@@ -57,8 +57,8 @@ RUN node tools/modifyConfiguration.js addToConfig='{ \
   "mail": { \
     "service": "gmail", \
     "auth": { \
-      "user": "fireculex@gmail.com", \
-      "pass": "mhgehjydqpurqmuy" \
+      "user": "", \
+      "pass": "" \
     } \
   } \
 }'
