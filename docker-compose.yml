@@ -6,6 +6,7 @@ services:
       - /var/lib/shinobi:/var/lib/shinobi
       - /var/log/shinobi:/root/.pm2/logs
       - /etc/shinobi/super.json:/opt/shinobi/super.json
+      - /dev/shm/ShinobiRAM:/dev/shm
     devices:
       - /dev/dri:/dev/dri
     environment:

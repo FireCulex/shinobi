@@ -1,7 +1,7 @@
 FROM node:alpine
 
 ENV S_HOME /opt/shinobi
-ENV COMMIT e197f067
+ENV COMMIT 37ebdba5
 
 WORKDIR $S_HOME
 
@@ -33,8 +33,8 @@ RUN echo {} > conf.json
 RUN node tools/modifyConfiguration.js addToConfig='{ \
    "port": 8080, \
    "passwordType": "sha256", \
-   "debugLog": false, \
-   "streamDir": "/var/lib/shinobi/stream", \
+   "debugLog": "false", \
+   "streamDir": "/dev/shm/streams", \
    "videosDir": "/var/lib/shinobi/video",\
    "binDir": "/var/lib/shinobi/files", \
    "dropInEventServer":true, \
